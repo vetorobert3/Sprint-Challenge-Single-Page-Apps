@@ -8,19 +8,20 @@ export default function CharacterList() {
   useEffect(() => {
     // TODO: Add API Request here - must run in `useEffect`
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
-    const setChars = () => {
+    const getChars = () => {
       axios
         .get('https://rickandmortyapi.com/api/character/')
         .then(response => {
+          setChars(response.data.results.id)
           console.log(response);
         })
         .catch(err => {
           console.log(err)
         })
     }
-  }, []);
 
-  console.log('here')
+    getChars();
+  }, []);
 
   return (
     <section className="character-list">
