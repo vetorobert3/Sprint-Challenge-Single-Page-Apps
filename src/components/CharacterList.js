@@ -28,7 +28,7 @@ export default function CharacterList(props) {
   return (
     <section className="character-list">
       <h2>{chars.map(char => (
-        <CharacterCard char={name} />
+        <CharacterCard />
       ))}
         TODO: `array.map()` over your state here!
       </h2>
