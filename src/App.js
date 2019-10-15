@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Link } from 'react-router-dom';
 import WelcomePage from './components/WelcomePage.js';
 import Header from "./components/Header.js";
 import CharacterList from './components/CharacterList.js';
+import LocationCard from './components/LocationCard.js';
 
 
 export default function App(props) {

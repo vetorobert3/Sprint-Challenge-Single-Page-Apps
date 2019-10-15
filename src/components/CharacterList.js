@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from 'axios';
 
 import CharacterCard from './CharacterCard.js';
+import LocationCard from './LocationCard.js';
 
 export default function CharacterList(props) {
   // TODO: Add useState to track data from useEffect
@@ -27,17 +28,30 @@ export default function CharacterList(props) {
 
   return (
     <section className="character-list">
-      <h2>{chars.map(char => {
+      <h2>
+        {chars.map(char => {
           return (
             <CharacterCard 
               key={char.id}
               name={char.name}
-              image={char.image}
+              species={char.species}
             />
           )
-      }
-      )}
+        })}
       </h2>
     </section>
+
+    // <section>
+    //   <h3>
+    //     {chars.map(char => {
+    //       return (
+    //         <LocationCard 
+    //           key={char.id}
+    //           location={char.location}
+    //         />
+    //       )
+    //     })}
+    //   </h3>
+    // </section>
   );
 }
