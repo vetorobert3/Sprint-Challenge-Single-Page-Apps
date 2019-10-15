@@ -27,10 +27,16 @@ export default function CharacterList(props) {
 
   return (
     <section className="character-list">
-      <h2>{chars.map(char => (
-        <CharacterCard name={char.id}/>
-      ))}
-        TODO: `array.map()` over your state here!
+      <h2>{chars.map(char => {
+          return (
+            <CharacterCard 
+              key={char.id}
+              name={char.name}
+              image={char.image}
+            />
+          )
+      }
+      )}
       </h2>
     </section>
   );
