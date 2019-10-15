@@ -26,6 +26,8 @@ export default function CharacterList(props) {
     getChars();
   }, []);
 
+  console.log(chars);
+
   return (
     <section className="character-list">
       <h2>
