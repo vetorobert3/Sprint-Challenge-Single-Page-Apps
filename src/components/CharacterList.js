@@ -37,6 +37,7 @@ export default function CharacterList(props) {
               key={char.id}
               name={char.name}
               species={char.species}
+              image={char.image}
             />
           )
         })}
